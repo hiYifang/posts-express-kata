@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "bb0dde4f-e112-4a2c-bbb0-d59795c9585b",
+		"name": "Posts Express kata - heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有 Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-wildwood-18287.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"blooming-wildwood-18287",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有 Posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-wildwood-18287.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"blooming-wildwood-18287",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"Tom\",\n    \"userContent\": \"今天的心情灰灰的\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-wildwood-18287.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"blooming-wildwood-18287",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新單筆 Post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"Mary\",\n    \"userContent\": \"一起來學習瑜伽吧\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-wildwood-18287.herokuapp.com/posts/1234",
+					"protocol": "https",
+					"host": [
+						"blooming-wildwood-18287",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆 Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-wildwood-18287.herokuapp.com/posts/1234",
+					"protocol": "https",
+					"host": [
+						"blooming-wildwood-18287",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
