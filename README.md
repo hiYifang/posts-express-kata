@@ -3,8 +3,8 @@
 #### 建立專案和引入套件
 - (1) 切換 Node.js 版本：``` nvm use v16.14.0 ```
 - (2) 建立專案：``` express --no-view [專案] ```
-- (3) 安裝套件：```npm i mongoose dotenv cors -s ```
-- (4) 引入模組：``` npm install ```
+- (3) 引入模組：``` npm install ```
+- (4) 安裝套件：```npm i mongoose dotenv cors -s ```
 - (5) package.json 自訂指令、部署 Heroku (檢查 npm start 所運行檔案、加入 Node.js 運行的版本號)
 - (6) 加入 .gitignore、config.env 檔案
 - (7) 加入 Git，進行 commit：``` git init ```
