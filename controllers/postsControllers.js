@@ -23,10 +23,17 @@ module.exports = {
   async deletePost(req, res){
     try {
       const postId = req.params.id; // 取得 id
-      await Post.findByIdAndDelete(postId);
-      successHandle(res, "成功刪除貼文資訊", `id 是 ${postId}`)
+      // 找出此筆 id 並刪除資料
+      const delPost = await Post.findByIdAndDelete(postId);
+      if (delPost) {
+        // 回傳成功
+        successHandle(res, "成功刪除貼文資訊", `id 是 ${postId}`)
+      } else {
+        // 回傳失敗
+        errorHandle(res, "id 不存在");
+      }
     } catch {
-      errorHandle(res, "id 不存在");
+      errorHandle(res, err.message);
     }
   },
   /* Post */
