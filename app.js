@@ -23,4 +23,14 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
 
+// HTTP 狀態碼：404
+app.use(function (req, res, next) {
+  res.status(404).send('抱歉，您的頁面找不到');
+})
+
+// HTTP 狀態碼：500
+app.use(function (err, req, res, next) {
+  res.status(500).send('程式有些問題，請稍後嘗試');
+})
+
 module.exports = app;
